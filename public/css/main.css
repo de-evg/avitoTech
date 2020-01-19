@@ -1,0 +1,45 @@
+.disableStyle {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.realtyList {
+  margin: 0 auto;
+  width: 1024px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.realtyCard {
+  margin-bottom: 20px;
+  width: 236px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.realtyCard__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.realtyCard__LinkAboutRealty {
+  text-decoration: none;
+  color: #000;
+}
+
+.realtyCard__address {
+  margin-bottom: 20px;
+}
+
+.realtyCard__preview--bgc {
+  background-color: tomato;
+}
+
