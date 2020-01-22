@@ -7,8 +7,8 @@ const createRealtyCard = (realty) => {
        <a class="realtyCard__link" href="card.html">
          <img class="realtyCard__preview realtyCard__preview--bgc realtyCard__LinkAboutRealty" src="${realty.previewImage}" alt="" width="200" height="160">
        </a>
-       <p class="realtyCard__price disableStyle">Цена: ${realty.price}</p>
-       <p class="realtyCard__address disableStyle">Адрес: ${realty.address}</p>
+       <p class="realtyCard__price disableStyle">${realty.price}</p>
+       <p class="realtyCard__address disableStyle">${realty.address}</p>
        <span>
          <a class="realtyCard__btn realtyCard__LinkAboutRealty" href="card.html">Подробнее</a>
        </span>
