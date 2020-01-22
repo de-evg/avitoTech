@@ -43,7 +43,7 @@ let getSettings = function (method, onSuccess) {
 };
 
 let loadData = function (method, onSuccess) {
-  let MethodSettings = getSettings(method.GET, onSuccess);
+  let MethodSettings = getSettings(method, onSuccess);
   xhrRequest(MethodSettings);
 };
 
