@@ -1,9 +1,9 @@
 const createRealtyInfo = (realty) => {
   const generateGalleryTemplates = (images) => {
-    let galleryListItems= [];
+    let galleryListItems = [];
     images.forEach((image) => {
-      galleryListItems.push(`<li class="realty-gallery__item">
-        <img class="realty-gallery__image realtyCard__preview--bgc" src="${image}" alt="" width="640" height="480">
+      galleryListItems.push(`<li class="realty-gallery__item slide">
+        <img class="realty-gallery__image realtyCard__preview--bgc" src="${image}" alt="">
        </li>`);
     });
     return galleryListItems.join(`\n`);
@@ -15,8 +15,10 @@ const createRealtyInfo = (realty) => {
      <p class="realty__address disableStyle">Адрес: ${realty.address}</p>
      <p class="realty__description disableStyle">Описание: ${realty.description}</p>
      <p class="realty__seller disableStyle">Продавец: ${realty.sellerName}</p>
-     <section class="realty-gallery">
-       <ul class="realty-gallery__container">
+     <section class="realty-gallery slider">
+       <button class="realty-gallery__prevBtn slider__prevBtn"></button>
+       <button class="realty-gallery__nextBtn slider__nextBtn"></button>
+       <ul class="realty-gallery__container disableStyle slider__container">
         ${generateGalleryTemplates(realty.images)}
        </ul>
      </section>`

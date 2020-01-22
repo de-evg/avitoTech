@@ -52,3 +52,52 @@
   background-color: tomato;
 }
 
+.realty {
+  margin: 0 auto;
+  width: 1024px;
+}
+
+.realty-gallery {
+  position: relative;
+}
+
+.realty-gallery__prevBtn,
+.realty-gallery__nextBtn {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: 30px solid transparent;
+  z-index: 1;
+  background-color: transparent;
+}
+
+.realty-gallery__prevBtn {
+  left: 0;
+  border-right-color: rgba(200, 200, 200, 1);
+}
+
+.realty-gallery__nextBtn {
+  right: 0;
+  border-left-color: rgba(200, 200, 200, 1);
+}
+
+.realty-gallery__container {
+  width: auto;
+  overflow: hidden;
+
+  display: flex;
+  position: relative;
+}
+
+.realty-gallery__item {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.realty-gallery__item img {
+  width: 100%;
+  height: auto;
+}
