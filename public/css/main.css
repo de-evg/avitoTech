@@ -218,24 +218,43 @@ body {
   z-index: -1;
 
   position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
+
 }
 
-.realtyCard .realtyCard__btn {
+.realtyCard__more {
+  bottom: 10px;
+  left: 20px;
+}
+
+.realtyCard__getOffer {
+  bottom: 10px;
+  right: 20px;
+}
+
+.realtyCard .realtyCard__btn,
+.realtyCard .realtyCard__link {
   font-family: "Proxima Nova", "Arial", sans-serif;
-  font-weight: 300;
+
   font-size: 14px;
-  color: #e4e4e4;
+
   text-decoration: none;
 
   -ms-flex-preferred-size: 100%;
 
       flex-basis: 100%;
-  padding: 2px 5px;
+}
+
+.realtyCard .realtyCard__btn{
+  color: #e4e4e4;
+  padding: 2px 10px;
   background-color: #c50f0f;
   border-radius: 3px;
+  font-weight: 300;
+}
+
+.realtyCard .realtyCard__link {
+  color: #c50f0f;
+  font-weight: 700;
 }
 
 .realtyCard:hover span {
