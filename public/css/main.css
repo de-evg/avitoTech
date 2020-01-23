@@ -55,7 +55,22 @@
 }
 
 body {
+  min-height: 100vh;
   background-color: rgb(241, 241, 241);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.page-footer {
+  margin-top: auto;
 }
 
 .page-title {
@@ -85,44 +100,56 @@ body {
 }
 
 .realtyList {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+
   margin: 0 auto;
   padding: 20px 0;
-  width: 984px;
+  width: 992px;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
 
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .realtyCard {
-  box-sizing: border-box;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 
+  -ms-flex-preferred-size: 222px;
+
+      flex-basis: 222px;
   width: 222px;
-  min-height: 344px;
 
-  margin: 20px 12px;
-  padding: 15px 8px 10px;
+  -ms-flex-item-align: center;
+
+      -ms-grid-row-align: center;
+
+      align-self: center;
+
+  margin: 30px 12px;
+  padding: 15px 8px 20px;
   border: 1px solid rgb(209, 209, 209);
   background-color: rgb(238, 238, 238);
 
   border-radius: 6px;
-
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: 0.4s;
 }
 
 .realtyCard:hover {
-  overflow: hidden;
-  width: 244px;
-  min-height: 380px;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin: 0;
+  margin-top: 0;
+  padding-bottom: 40px;
 
-  border: 1px solid rgb(228, 228, 228);
-  box-shadow: 3px 3px 8px rgb(145, 145, 144);
+  border-color: rgb(228, 228, 228);
+  -webkit-box-shadow: 3px 3px 8px rgb(145, 145, 144);
+          box-shadow: 3px 3px 8px rgb(145, 145, 144);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .realtyCard__title {
@@ -130,27 +157,26 @@ body {
 
   text-align: left;
   word-wrap: break-word;
-  min-height: 56px;
+
   width: 202px;
+  min-height: 40px;
+
+  font-family: "Proxima Nova", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .realtyCard__title a {
   text-decoration: none;
 
-  font-family: "Proxima Nova", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
   color: #003ba7;
 }
 
-.realtyCard__link {
+.realtyCard__ImgLink {
+  display: block;
+
   margin-bottom: 15px;
-
-  color: rgb(0, 149, 240);
-}
-
-.realtyCard__link:hover {
-  color: #ff6163;
 }
 
 .realtyCard__preview {
@@ -169,6 +195,8 @@ body {
 
 .realtyCard__address {
   width: 202px;
+  min-height: 60px;
+
   word-wrap: break-word;
 
   font-family: "Proxima Nova", "Arial", sans-serif;
@@ -181,24 +209,37 @@ body {
   background-color: tomato;
 }
 
-.realtyCard__btn {
-  display: none;
+.realtyCard span {
+  z-index: -1;
+
+  position: absolute;
+  bottom: 13px;
+  left: 28%;
 }
 
-.realtyCard:hover .realtyCard__btn {
-  display: block;
-
-  margin-top: 10px;
-  margin-bottom: 30px;
+.realtyCard .realtyCard__btn {
   font-family: "Proxima Nova", "Arial", sans-serif;
   font-weight: 300;
   font-size: 14px;
   color: #e4e4e4;
   text-decoration: none;
 
-  padding: 5px 16px;
+  -ms-flex-preferred-size: 100%;
+
+      flex-basis: 100%;
+  padding: 7px 10px;
   background-color: #c50f0f;
   border-radius: 3px;
+}
+
+.realtyCard:hover span {
+  z-index: 1;
+}
+
+.page-footer {
+  width: 100%;
+  min-height: 30px;
+  background-color: #e5e5e5;
 }
 
 .realty {
@@ -247,7 +288,9 @@ body {
   content: "";
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 
   border: 30px solid transparent;
   z-index: 1;
@@ -282,12 +325,18 @@ body {
 
 .realty-gallery__prevBtn,
 .realty-gallery__nextBtn {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 
 .realty-gallery__container {
   width: auto;
   overflow: hidden;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
 
   display: flex;
   position: relative;
@@ -296,7 +345,9 @@ body {
 .realty-gallery__item {
   position: relative;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .realty-gallery__item img {

@@ -4,7 +4,7 @@ const createRealtyCard = (realty) => {
        <h2 class="realtyCard__title disableStyle">
          <a class="realtyCard__LinkAboutRealty" href="card.html" ">${realty.title}</a>
        </h2>
-       <a class="realtyCard__link" href="card.html">
+       <a class="realtyCard__ImgLink" href="card.html">
          <img class="realtyCard__preview realtyCard__preview--bgc realtyCard__LinkAboutRealty" src="${realty.previewImage}" alt="" width="200" height="160">
        </a>
        <p class="realtyCard__price disableStyle">${realty.price}</p>
