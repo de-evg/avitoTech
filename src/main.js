@@ -28,7 +28,7 @@ if (mainElement.querySelector(`.realtyList`)) {
   loadData(Method.GET_ITEMS, renderCards);
 
   realtyList.addEventListener(`click`, (evt) => {
-    if (evt.target.classList.contains(`realtyCard__LinkAboutRealty`)) {
+    if (evt.target.classList.contains(`realtyCard__linkAboutRealty`)) {
       const realtyID = evt.target.parentElement.parentElement.id;
       storage.setItem(`idRealty`, realtyID);
     }
