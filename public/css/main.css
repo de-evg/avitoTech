@@ -77,8 +77,7 @@ body {
   position: relative;
 
   width: 960px;
-  margin: 60px auto;
-
+  margin: 54px auto 30px;
 
   text-align: left;
   text-transform: uppercase;
@@ -92,7 +91,7 @@ body {
 .page-title::before {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
 
   width: 470px;
   height: 1px;
@@ -114,42 +113,47 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+
+  overflow: hidden;
 }
 
 .realtyCard {
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 
-  -ms-flex-preferred-size: 222px;
+  -ms-flex-preferred-size: 203px;
 
-      flex-basis: 222px;
-  width: 222px;
+      flex-basis: 203px;
+  width: 203px;
+  height: 267px;
 
-  -ms-flex-item-align: center;
+  -ms-flex-item-align: stretch;
 
-      -ms-grid-row-align: center;
+      -ms-grid-row-align: stretch;
 
-      align-self: center;
+      align-self: stretch;
 
-  margin: 30px 12px;
+  margin: 13px 12px;
   padding: 15px 8px 20px;
   border: 1px solid rgb(209, 209, 209);
   background-color: rgb(238, 238, 238);
 
   border-radius: 6px;
+
+  overflow: hidden;
 }
 
 .realtyCard:hover {
-  margin-top: 0;
-  padding-bottom: 40px;
-
+  margin: 0;
+  padding: 15px 20px 14px;
   border-color: rgb(228, 228, 228);
   -webkit-box-shadow: 3px 3px 8px rgb(145, 145, 144);
           box-shadow: 3px 3px 8px rgb(145, 145, 144);
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.0);
+      -ms-transform: scale(1.0);
+          transform: scale(1.0);
+  flex-basis: 203px;
+  width: 203px;
+  height: 299px;
 }
 
 .realtyCard__title {
@@ -176,7 +180,7 @@ body {
 .realtyCard__ImgLink {
   display: block;
 
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 .realtyCard__preview {
@@ -195,14 +199,15 @@ body {
 
 .realtyCard__address {
   width: 202px;
-  min-height: 60px;
 
   word-wrap: break-word;
 
   font-family: "Proxima Nova", "Arial", sans-serif;
   font-weight: 100;
-  font-size: 16px;
+  font-size: 13px;
+  line-height: 14px;
   color: #000;
+  overflow: hidden;
 }
 
 .realtyCard__preview--bgc {
@@ -213,8 +218,9 @@ body {
   z-index: -1;
 
   position: absolute;
-  bottom: 13px;
-  left: 28%;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .realtyCard .realtyCard__btn {
@@ -227,7 +233,7 @@ body {
   -ms-flex-preferred-size: 100%;
 
       flex-basis: 100%;
-  padding: 7px 10px;
+  padding: 2px 5px;
   background-color: #c50f0f;
   border-radius: 3px;
 }
