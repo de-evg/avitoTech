@@ -1,3 +1,5 @@
+import {checkTypo} from '../utils.js';
+
 const createRealtyInfo = (realty) => {
   const generateGalleryTemplates = (realtyData) => {
     let galleryListItems = [];
@@ -8,7 +10,7 @@ const createRealtyInfo = (realty) => {
     });
     return galleryListItems.join(`\n`);
   };
-
+  checkTypo(realty);
   return (
     `<h2 class="realty__title disableStyle">${realty.title}</h2>
      <p class="realty__price disableStyle"><span>Цена:</span> ${realty.price}</p>

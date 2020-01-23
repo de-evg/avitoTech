@@ -1,4 +1,7 @@
+import {checkTypo} from '../utils.js';
+
 const createRealtyCard = (realty) => {
+  checkTypo(realty);
   return (
     `<li class="realtyCard" id="${realty.id}">
        <h2 class="realtyCard__title disableStyle">
