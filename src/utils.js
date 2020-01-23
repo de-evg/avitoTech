@@ -3,7 +3,7 @@ const checkTypo = (data) => {
   keys.forEach((key) => {
     let newString = data[key];
     if (typeof newString === `string`) {
-      const regExp = [/,,/, /руб/gi];
+      const regExp = [/,,/, /руб./gi];
       newString = newString.replace(regExp[0], `,`);
       newString = newString.replace(regExp[1], `&#8381`);
     }
