@@ -7,6 +7,7 @@ let xhrRequest = function (settings) {
   xhr.addEventListener(`load`, function () {
     if (xhr.status === SUCCESS_CODE) {
       settings.success(xhr.response);
+      console.log(xhr.response);
     } else {
       console.log(xhr.status);
     }
